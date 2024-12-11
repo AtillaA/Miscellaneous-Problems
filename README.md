@@ -11,3 +11,21 @@ Copyright Notice:
 These solutions are for educational and personal use only.
 The problems and challenges are copyrighted by LeetCode (https://leetcode.com).
 The code in this repository is original, and any use of it beyond personal and educational purposes may require permission.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+IsPalindrome
+
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+
+LongestPalindromicSubstring
+
+Given a string s, return the longest palindromic substring in s.
+
+
+MaximumBeautyAfterOperation
+
+You are given a 0-indexed array nums and an integer k. You can replace nums[i] with any value in the range [nums[i] - k, nums[i] + k] for any index i. You can apply the operation to each index only once. Return the maximum possible beauty of the array after applying the operation any number of times.
