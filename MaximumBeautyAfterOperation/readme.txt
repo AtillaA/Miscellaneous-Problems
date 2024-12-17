@@ -1,4 +1,5 @@
 Maximum Beauty of an Array After Applying Operation
+---------------------------------------------------
 Problem Number: #2779
 Difficulty: Medium
 
