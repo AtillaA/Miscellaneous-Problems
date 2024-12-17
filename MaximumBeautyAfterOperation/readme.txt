@@ -17,8 +17,14 @@ Note that you can apply the operation to each index only once.
 
 A subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the order of the remaining elements.
 
+Constraints:
+------------
+1 <= nums.length <= 105
+0 <= nums[i], k <= 105
 
 ________________________________________________________________________________________________________________
+----------------------------------------------------------------------------------------------------------------
+
 Example 1:
 ----------
 Input: nums = [4,6,1,2], k = 2
@@ -29,6 +35,7 @@ Explanation: In this example, we apply the following operations:
 After the applied operations, the beauty of the array nums is 3 (subsequence consisting of indices 0, 1, and 3).
 It can be proven that 3 is the maximum possible length we can achieve.
 
+----------------------------------------------------------------------------------------------------------------
 
 Example 2:
 ----------
@@ -36,10 +43,6 @@ Input: nums = [1,1,1,1], k = 10
 Output: 4
 Explanation: In this example we don't have to apply any operations.
 The beauty of the array nums is 4 (whole array).
- 
 
-Constraints:
-------------
-1 <= nums.length <= 105
-0 <= nums[i], k <= 105
+----------------------------------------------------------------------------------------------------------------
 ________________________________________________________________________________________________________________
