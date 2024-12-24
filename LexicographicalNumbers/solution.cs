@@ -10,16 +10,18 @@ public class Solution {
         return lexgr; // return the final list
     }
 
+    // recursion to explore in the order of e.g. 1 -> 10 -> 100 -> ...
+    // for the purpose of achieving lexicographical order
     private void DFS(int current, int n, IList<int> lexgr) {
-        if (current > n) return;  // base case (limit is n)
+        if (current > n) return;           // base case (limit is n)
 
-        lexgr.Add(current);  // add to the list
+        lexgr.Add(current);                // add to the list
 
         // generate by appending digits 0 to 9
-        for (int i = 0; i <= 9; i++) {
-            int next = current * 10 + i;  // append
-            if (next > n) break;  // if exceeds, stop exploration
-            DFS(next, n, lexgr);  // recurse with the new number
+        for (int j = 0; j <= 9; j++) {
+            int next = current * 10 + j;   // append
+            if (next > n) break;           // if exceeds, stop exploration
+            DFS(next, n, lexgr);           // recurse with the new number
         }
     }
 }
