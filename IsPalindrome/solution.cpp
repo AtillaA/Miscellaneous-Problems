@@ -4,23 +4,19 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(int x) {
-        int input = x;
-        long y = 0;
-        int sign = (input < 0) ? -1 : 1;   // Determine the sign of x
-        input = std::abs(input);           // Work with the absolute value of x
+        int input = x;                     // to edit the input
+        long y = 0;                        // reversed number
+        int sign = (input < 0) ? -1 : 1;   // determine the sign of x
+        input = abs(input);                // absolute value of x
 
         while (input > 0) {
-            int lastDigit = input % 10;    // Extract the last digit
-            y = y * 10 + lastDigit;        // Append the last digit to the reversed number
-            input /= 10;                   // Remove the last digit from x
+            int lastDigit = input % 10;    // extract the last digit
+            y = y * 10 + lastDigit;        // append the last digit
+            input /= 10;                   // remove the last digit of x
         }
 
-        y *= sign;  // Apply the original sign
+        y *= sign;  // apply the original sign
 
-        if (x != y || x < 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return (x != y || x < 0) ? false : true; // is the reversed number equal to the original input
     }
 };
