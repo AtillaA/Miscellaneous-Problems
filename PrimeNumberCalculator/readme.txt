@@ -4,7 +4,7 @@ Problem Number: None
 Difficulty: Hard
 
 
-This is a seperate miscellaneous project that consists three different algorithms for detecting prime numbers in a given list of consecutive numbers [2,...,n].
+This is a seperate miscellaneous project that consists of three different algorithms for detecting prime numbers in a given list of consecutive numbers [2,...,n].
 
 1.) Sieve of Eratosthenes: Iterative approach of marking the multiples of each prime number. Time complexity O(n log log n)
                               - Iterate over the list of numbers [2,...,n]
