@@ -2,11 +2,14 @@
 #include <string>
 using namespace std;
 
+
 class Solution {
 public:
     string longestPalindrome(string s) {
         int n = s.length();
-        if (n == 0) return ""; // no substring
+
+        // base case
+        if (n == 0) return "";
 
         int start = 0;
         int maxLength = 1;
@@ -26,15 +29,16 @@ public:
             int len1 = expandAroundCenter(i, i); // odd-length palindromes (centered at i)
             int len2 = expandAroundCenter(i, i + 1); // even-length palindromes (centered between i and i+1)
 
-            // Update the longest palindrome
+            // update the longest palindrome
             int len = max(len1, len2);
 
-            // condition is updated if the helper function detected a substring with length 2 (or above)
+            // update if helper func detected a substring with greater length
             if (len > maxLength) {
-                maxLength = len;              // update the maxLength, depicting the lps
-                start = i - (len - 1) / 2;    // update the start point of the substring
+                maxLength = len;              // update maxLength
+                start = i - (len - 1) / 2;    // update start pt of the substr
             }
-            // condition is triggered again if a substring with greater length is found
+            
+            // triggered again if a substr w/ greater length is found
         }
 
         return s.substr(start, maxLength);
