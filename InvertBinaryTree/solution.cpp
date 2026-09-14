@@ -1,4 +1,4 @@
-// definition for a binary tree node
+// binary tree node
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -12,9 +12,10 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        if (root == nullptr) { return nullptr; } // base case
+        // base case
+        if (root == nullptr) return nullptr;
 
-        // swap the left and right child
+        // swap left & right child nodes
         TreeNode* temp = root->left;
         root->left = root->right;
         root->right = temp;
@@ -23,6 +24,7 @@ public:
         invertTree(root->left);
         invertTree(root->right);
 
+        // recursion yields leftmost child as root node
         return root;
     }
 };
